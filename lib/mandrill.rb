@@ -85,7 +85,7 @@ module Mandrill
 
             begin
                 error_info = JSON.parse(body)
-                if error_info['status'] != 'error' or not error_info['name']
+                if error_info['status'] != 'error' || not error_info['name']
                     raise Error, "We received an unexpected error: #{body}"
                 end
                 if error_map[error_info['name']]

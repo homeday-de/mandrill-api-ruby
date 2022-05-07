@@ -1,5 +1,5 @@
 module Mandrill
-    class Error < Exception
+    class Error < RuntimeError
     end
     class ValidationError < Error
     end
